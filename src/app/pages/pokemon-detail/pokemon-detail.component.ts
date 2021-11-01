@@ -18,8 +18,9 @@ export class PokemonDetailComponent implements OnInit {
   public apiError: any;
 
   ngOnInit(): void {
+    this.pokemon = null;
+    this.apiError = null;
     this.route.params.subscribe(id => {this.getPokemon(id.id)})
-    
   }
 
   getPokemon(id:string):void{
