@@ -1,0 +1,14 @@
+<section class="container" *ngIf="pokemons">
+  <article *ngFor="let pokemon of pokemons | paginate: { itemsPerPage: 20, currentPage: p, totalItems: count }" class="pokecard">
+    <div *ngIf="pokemon.status" class="content">
+      <span class="number">{{leadingZero(pokemon.status.id)}}</span>
+      <img [src]="pokemon.status.sprites.other['official-artwork'].front_default" [alt]="pokemon.name" />
+      <h3>{{pokemon.name}}</h3>
+      <ul>
+        <li *ngFor="let type of pokemon.status.types" [class]="type.type.name">{{type.type.name}}</li>
+      </ul>
+      <a routerLink="/pokemon/{{pokemon.status.id}}" class="linkfill"></a>
+    </div>
+  </article>
+  <pagination-controls class="paginator" (pageChange)="p = $event; setPage(p)"></pagination-controls>
+</section>

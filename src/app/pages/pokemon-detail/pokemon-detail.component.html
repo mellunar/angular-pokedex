@@ -1,0 +1,37 @@
+<article class="pokemon-detail" *ngIf="pokemon">
+  <div class="img-container">
+    <img [alt]="pokemon.name" [src]="pokemon.sprites.other['official-artwork'].front_default" />
+  </div>
+  <div class="pokemon-info">
+    <h2>{{pokemon.name}}</h2>
+    <div class="pokemon-id">{{leadingZero(pokemon.id)}}</div>
+    <div class="info-field">
+      <b>Type{{pokemon.types.length > 1 ? 's' : ''}}:</b> 
+      <div class="info-type" *ngFor="let type of pokemon.types" [class]="type.type.name">{{type.type.name}}</div>
+    </div>
+    <div class="info-field">
+      <b>Abilit{{pokemon.types.length > 1 ? 'ies' : 'y'}}:</b> 
+      <div class="info-type" *ngFor="let ability of pokemon.abilities">{{ability.ability.name}}</div>
+    </div>
+    <div class="info-field">
+      <b>Height:</b> <div class="info-info">{{pokemon.height*10}} cm</div>
+    </div>
+    <div class="info-field">
+      <b>Weight:</b> <div class="info-info">{{pokemon.weight/10}} kg</div>
+    </div>
+
+    <div class="info-field title">
+      <b>Base stats</b>
+    </div>
+    <div class="info-field" *ngFor="let stat of pokemon.stats">
+      <b class="stat-name" [class.uppercase]="stat.stat.name === 'hp'">{{stat.stat.name.split("-").join(" ")}}:</b> <div class="info-info">{{stat.base_stat}}</div>
+    </div>
+  </div>
+</article>
+
+<article class="pokemon-error" *ngIf="apiError">
+  <p>Something went wrong</p>
+  <h2>{{apiError.status}}</h2>
+  <h3>{{apiError.error}}</h3>
+  <p>{{apiError.message}}</p>
+</article>

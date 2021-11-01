@@ -1,1 +1,135 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --open-sans: 'Open Sans', sans-serif;
+  --primary: #262835;
+  --green: #369143;
+  --greenhover: #4dad5b;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: var(--primary);
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -o-crisp-edges;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 10px;
+  flex-grow: 1;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.linkfill {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.widthfill {
+  width: 100%;
+}
+.uppercase {
+  text-transform: uppercase !important;
+}
+
+.bug {
+  background: #8c9f2a !important;
+  color: #fff;
+}
+.dark {
+  background: #453838 !important;
+  color: #fff;
+}
+.dragon {
+  background: #3f40c0 !important;
+  color: #fff;
+}
+.electric {
+  background: #f4c234 !important;
+  color: #000;
+}
+.fairy {
+  background: #f890ea !important;
+  color: #000;
+}
+.fighting {
+  background: #813630 !important;
+  color: #fff;
+}
+.fire {
+  background: #e7672e !important;
+  color: #fff;
+}
+.flying {
+  background: #79a2f2 !important;
+  color: #fff;
+}
+.ghost {
+  background: #65559f !important;
+  color: #fff;
+}
+.grass {
+  background: #4fb443 !important;
+  color: #fff;
+}
+.ground {
+  background: #b6924b !important;
+  color: #000;
+}
+.ice {
+  background: #6fd8ea !important;
+}
+.normal {
+  background: #b0a586 !important;
+  color: #000;
+}
+.poison {
+  background: #833fa1 !important;
+  color: #fff;
+}
+.psychic {
+  background: #f25384 !important;
+  color: #fff;
+}
+.rock {
+  background: #926746 !important;
+  color: #fff;
+}
+.steel {
+  background: #8b88a7 !important;
+  color: #000;
+}
+.water {
+  background: #3a8cea !important;
+  color: #fff
+}

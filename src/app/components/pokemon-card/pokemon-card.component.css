@@ -1,0 +1,9 @@
+.pokecard {
+  width: 100%;
+  background: #fff;
+  border-radius: 15px;
+  padding: 10px;
+}
+.pokecard img {
+  width: 100%;
+}

@@ -1,0 +1,7 @@
+<article *ngIf="pokemon" class="pokecard">
+  <img [src]="getImage()" [alt]="pokemon.name" />
+  <h3>{{pokemon.name}}</h3>
+  <ul *ngIf="pokemon.status">
+    <li *ngFor="let type of pokemon.status.types">{{type.type.name}}</li>
+  </ul>
+</article>
